@@ -8,8 +8,8 @@ const popSound = new Howl({
   preload: true
 });
 
-// import deepakImg from '../../assets/mentor/dr.-deepak-dwivedi/deepakdwivedi.png';
-// import arvindImg from '../../assets/mentor/dr.-arvind-signh/arvindsingh.png';
+import deepakImg from '../../assets/mentor/deepakdwivedi.png';
+import arvindImg from '../../assets/mentor/arvindsingh.png';
 
 function Mentor() {
 
@@ -42,7 +42,7 @@ function Mentor() {
                 popSound.play();
               }}
             >
-              <img src="" alt="Dr. Deepak Dwivedi" loading="lazy" />
+              <img src={deepakImg} alt="Dr. Deepak Dwivedi" loading="lazy" />
             </div>
           </div>
         </section>
@@ -60,7 +60,7 @@ function Mentor() {
                 popSound.play();
               }}
             >
-              <img src="" alt="Co-Faculty Advisor" loading="lazy" />
+              <img src={arvindImg} alt="Co-Faculty Advisor" loading="lazy" />
             </div>
           </div>
 

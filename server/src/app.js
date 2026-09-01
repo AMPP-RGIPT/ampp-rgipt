@@ -20,7 +20,7 @@ connectDB();
 
 // 2. CORS - Must be very early to handle preflight OPTIONS requests
 const allowedOrigins = [
-  'https://ampp-omega.vercel.app',
+  'https://ampprgipt.vercel.app',
   'http://localhost:5173'
 ];
 
