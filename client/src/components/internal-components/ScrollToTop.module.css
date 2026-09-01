@@ -1,0 +1,57 @@
+.scrollTop {
+  position: fixed;
+  bottom: 2rem;
+  right: 1.25rem;
+  width: 50px;
+  height: 50px;
+  background: #7a2a12;
+  color: #f0e4d0;
+  border: 1px solid rgba(240, 228, 208, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px) scale(0.8);
+  transition:
+    opacity 0.4s ease,
+    visibility 0.4s ease,
+    transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    background 0.3s ease,
+    color 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.scrollTop.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+}
+
+.scrollTop svg {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s ease;
+}
+
+.scrollTop:hover {
+  background: #f0e4d0;
+  color: #7a2a12;
+  border-color: #7a2a12;
+}
+
+.scrollTop:hover svg {
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .scrollTop {
+    bottom: 1.25rem;
+    right: 0.75rem;
+    width: 44px;
+    height: 44px;
+  }
+}

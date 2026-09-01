@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Raleway:wght@300;400;500;600;700;800&display=swap');
+
+.page {
+  min-height: 100vh;
+  background-color: var(--cream);
+  color: var(--rust-char);
+  padding-top: 140px;
+  padding-bottom: 100px;
+  position: relative;
+  font-family: 'Raleway', sans-serif;
+  overflow-x: hidden;
+}
+
+.verticalLines {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.verticalLines span {
+  width: 1px;
+  height: 100%;
+  background: rgba(139, 58, 30, 0.05);
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 4rem;
+  position: relative;
+  z-index: 1;
+}
+
+.adminTrigger {
+  position: absolute;
+  top: 40px;
+  right: 4rem;
+  z-index: 100;
+}
+
+.adminBtnSmall {
+  background: var(--cream);
+  border: 1px solid var(--border);
+  color: var(--rust);
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s var(--ease);
+  box-shadow: 4px 4px 0px rgba(139, 58, 30, 0.06);
+}
+
+.adminBtnSmall:hover {
+  background: var(--rust);
+  color: var(--cream);
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px rgba(139, 58, 30, 0.1);
+}
+
+.adminControls {
+  display: flex;
+  gap: 1rem;
+}
+
+.addBtn {
+  background: var(--rust);
+  color: var(--cream);
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s var(--ease-spring);
+  box-shadow: 6px 6px 0px rgba(139, 58, 30, 0.1);
+}
+
+.addBtn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 8px 8px 0px rgba(139, 58, 30, 0.15);
+}
+
+.logoutBtn {
+  background: transparent;
+  border: 1.5px dotted var(--rust);
+  color: var(--rust);
+  padding: 0.8rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s var(--ease);
+}
+
+.logoutBtn:hover {
+  background: rgba(139, 58, 30, 0.05);
+}
+
+.sectionSpacer {
+  margin-top: 10rem;
+  border-top: 1px solid var(--border);
+  padding-top: 10rem;
+}
+
+.noEvents {
+  text-align: center;
+  padding: 10rem 0;
+  color: var(--rust-char);
+  opacity: 0.5;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 1024px) {
+  .container { padding: 0 2rem; }
+  .adminTrigger { right: 2rem; top: 30px; }
+  .sectionSpacer { margin-top: 6rem; padding-top: 6rem; }
+}
+
+@media (max-width: 768px) {
+  .page { padding-top: 160px; }
+  .container { padding: 0 1.5rem; }
+  .adminTrigger {
+    position: absolute;
+    top: 95px;
+    right: 1.5rem;
+    margin-bottom: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .adminControls {
+    gap: 0.8rem;
+  }
+  .adminBtnSmall, .addBtn, .logoutBtn {
+    padding: 0.5rem 1rem;
+    font-size: 0.65rem;
+    box-shadow: 4px 4px 0px rgba(139, 58, 30, 0.1);
+  }
+  .sectionSpacer { margin-top: 4rem; padding-top: 4rem; }
+  .noEvents { padding: 5rem 0; font-size: 1rem; }
+}
+
+/* Skeleton Loader Styles */
+.skeletonContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  width: 100%;
+  padding-top: 2rem;
+}
+
+.pulse {
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.6; }
+  50% { opacity: 0.2; }
+  100% { opacity: 0.6; }
+}
+
+.skeletonHero {
+  display: flex;
+  gap: 3rem;
+  margin-bottom: 6rem;
+  align-items: center;
+}
+
+.skeletonImage {
+  width: 50%;
+  height: 500px;
+  background-color: rgba(139, 58, 30, 0.1);
+  border-radius: 4px;
+}
+
+.skeletonHeroContent {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.skeletonText {
+  background-color: rgba(139, 58, 30, 0.1);
+  border-radius: 4px;
+}
+
+.skeletonGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.skeletonCard {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  background: var(--cream);
+  border: 1px solid var(--border);
+  padding: 1.5rem;
+  border-radius: 4px;
+}
+
+.skeletonImageSm {
+  width: 100%;
+  height: 240px;
+  background-color: rgba(139, 58, 30, 0.1);
+  border-radius: 4px;
+}
+
+.skeletonCardContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+@media (max-width: 768px) {
+  .skeletonHero {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .skeletonImage, .skeletonHeroContent {
+    width: 100%;
+  }
+  .skeletonImage {
+    height: 300px;
+  }
+}

@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Raleway:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --rust:       #8b3a1e;
+  --rust-deep:  #7a2608;
+  --gold:       #a07840;
+  --cream:      #fdf8f3;
+  --text-char:  #3d1004;
+  --ease:       cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.section {
+  padding: 100px 60px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.eyebrow {
+  display: block;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem;
+  color: var(--gold);
+  margin-bottom: 12px;
+}
+
+.title {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 800;
+  color: var(--rust);
+  text-transform: uppercase;
+  letter-spacing: -0.04em;
+  margin-bottom: 30px;
+  line-height: 0.9;
+}
+
+.sharpText {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  max-width: 800px;
+  opacity: 0.85;
+  margin-bottom: 40px;
+}
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 60px;
+}
+
+.featureCard {
+  background: #fff;
+  padding: 40px;
+  border-radius: 20px;
+  border: 1px solid rgba(139, 58, 30, 0.08);
+  transition: transform 0.6s var(--ease), box-shadow 0.6s var(--ease);
+}
+
+.featureCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 30px 60px rgba(139, 58, 30, 0.1);
+}
+
+.featureCard h3 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--rust-deep);
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+}
+
+.featureCard p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .section { padding: 80px 20px; }
+}

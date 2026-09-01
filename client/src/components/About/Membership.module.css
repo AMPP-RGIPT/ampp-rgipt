@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Raleway:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --rust:       #8b3a1e;
+  --rust-deep:  #7a2608;
+  --gold:       #a07840;
+  --cream:      #fdf8f3;
+  --text-char:  #3d1004;
+  --ease:       cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.section {
+  padding: 100px 60px;
+  max-width: 1400px;
+  margin: 0 auto;
+  background: var(--cream);
+}
+
+.eyebrow {
+  display: block;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem;
+  color: var(--gold);
+  margin-bottom: 12px;
+}
+
+.title {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 800;
+  color: var(--rust);
+  text-transform: uppercase;
+  letter-spacing: -0.04em;
+  margin-bottom: 30px;
+  line-height: 0.9;
+}
+
+.sharpText {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  max-width: 800px;
+  opacity: 0.85;
+}
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 60px;
+}
+
+.benefitCard {
+  background: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  border: var(--dotted);
+  transition: transform 0.6s var(--ease), box-shadow 0.6s var(--ease);
+}
+
+.benefitCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 50px rgba(139, 58, 30, 0.08);
+}
+
+.benefitCard h3 {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--rust-deep);
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+}
+
+.benefitCard p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  opacity: 0.8;
+}
+
+.avatarWrapper {
+  width: clamp(280px, 40vw, 420px);
+  aspect-ratio: 1;
+  border-radius: 12px;
+  background: var(--rust);
+  overflow: hidden;
+  border: var(--dotted);
+  position: relative;
+}
+
+.ctaBanner {
+  margin-top: 80px;
+  padding: 60px;
+  border-radius: 24px;
+  background: var(--rust);
+  color: #fff;
+  text-align: center;
+}
+
+.ctaBanner h3 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.ctaBanner p {
+  opacity: 0.9;
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto 40px;
+}
+
+.ctaButton {
+  display: inline-block;
+  background: #fff;
+  color: var(--rust);
+  padding: 16px 48px;
+  border-radius: 99px;
+  font-weight: 800;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.ctaButton:hover {
+  transform: scale(1.05);
+  background: var(--cream);
+  color: var(--rust);
+}
+
+@media (max-width: 768px) {
+  .section { padding: 80px 20px; }
+  .ctaBanner { padding: 40px 30px; }
+  .ctaBanner h3 { font-size: 1.8rem; }
+}

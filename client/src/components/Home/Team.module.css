@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600;700;800&display=swap');
+
+:root {
+  --rust:       #8b3a1e;
+  --rust-deep:  #7a2608;
+  --rust-char:  #3d1004;
+  --gold:       #a07840;
+  --cream:      #f5ede0;
+  --border:     rgba(139, 58, 30, 0.12);
+  --ease-out:   cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.teamSection {
+  position: relative;
+  font-family: 'Raleway', sans-serif;
+  padding: 80px 0 100px;
+  overflow: hidden;
+  background: var(--cream);
+}
+
+.eyebrow {
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.32em;
+  color: var(--gold);
+  padding: 60px 60px 36px;
+  margin: 0;
+  margin-bottom:1rem;
+  opacity: 0;
+}
+
+.teamsList {
+  border-top: 1px solid var(--border);
+}
+
+.teamRow {
+  position: relative;
+  border-bottom: 1px solid var(--border);
+  cursor: pointer;
+  height: clamp(72px, 10vw, 120px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  opacity: 0;
+}
+
+.teamName {
+  font-size: clamp(1.8rem, 5vw, 4.2rem);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  color: var(--rust-char);
+  pointer-events: none;
+  position: relative;
+  z-index: 1;
+  transition: opacity 0.35s ease, transform 0.4s var(--ease-out);
+}
+
+.hoverReveal {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    var(--rust)      0%,
+    var(--rust-deep) 60%,
+    #3d1004          100%
+  );
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  opacity: 0;
+  transform: scaleY(0);
+  transform-origin: bottom center;
+  transition:
+    opacity   0.35s ease,
+    transform 0.45s var(--ease-out);
+  z-index: 2;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .teamRow:hover .hoverReveal,
+  .teamRow.hovered .hoverReveal {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+  .teamRow:hover .teamName,
+  .teamRow.hovered .teamName {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+}
+
+.teamRow.active .hoverReveal {
+  opacity: 1 !important;
+  transform: scaleY(1) !important;
+}
+
+.teamRow.active .teamName {
+  opacity: 0 !important;
+  transform: translateY(-6px) !important;
+}
+
+.marqueeTrack {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  animation: marqueeScroll 16s linear infinite;
+  will-change: transform;
+}
+
+.marqueeItem {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 0 32px;
+  flex-shrink: 0;
+}
+
+.marqueeText {
+  font-size: clamp(1.8rem, 5vw, 4.2rem);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+
+  color: var(--cream);
+  margin: 0;
+  white-space: nowrap;
+}
+
+.capsule {
+  width: clamp(70px, 9vw, 110px);
+  height: clamp(36px, 4.5vw, 56px);
+  border-radius: 999px;
+  background: #c5c9c7;
+  border: 1.5px solid rgba(160, 120, 64, 0.5);
+  overflow: hidden;
+  flex-shrink: 0;
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.15),
+    inset 0 0 8px rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s var(--ease-out);
+}
+
+.capsule img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.9;
+  filter: grayscale(10%) sepia(5%);
+}
+
+@keyframes marqueeScroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@media (max-width: 768px) {
+  .eyebrow   { padding: 40px 20px 28px; font-size: 0.9rem; }
+  .teamRow   { height: clamp(70px, 16vw, 100px); }
+  .teamName  { font-size: clamp(1.6rem, 6.5vw, 2.5rem); }
+  .marqueeText { font-size: clamp(1.6rem, 6.5vw, 2.5rem); }
+  .capsule   { width: 70px; height: 35px; }
+  .marqueeItem { gap: 16px; padding: 0 20px; }
+
+  .eyebrow,
+  .teamRow   { opacity: 1 !important; }
+
+  .hoverReveal { transform: scaleY(0); }
+  .teamName    { opacity: 1; }
+}
+
+@media (max-width: 540px) {
+  .teamSection { padding-bottom: 60px; }
+  .teamRow     { height: 68px; }
+  .teamName    { font-size: clamp(1.3rem, 7vw, 1.8rem); }
+  .marqueeText { font-size: clamp(1.3rem, 7vw, 1.8rem); }
+  .capsule     { width: 56px; height: 28px; }
+  .marqueeItem { gap: 12px; padding: 0 16px; }
+}
+
+@media (max-width: 390px) {
+  .teamName    { font-size: clamp(1.15rem, 6vw, 1.5rem); }
+  .marqueeText { font-size: clamp(1.15rem, 6vw, 1.5rem); }
+}
