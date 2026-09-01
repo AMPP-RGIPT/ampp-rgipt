@@ -1,6 +1,18 @@
 import axios from 'axios';
 
-let rawBaseUrl = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000/api';
+let rawBaseUrl = import.meta.env.VITE_API_BASE_URL;
+
+// Safeguard: If VITE_API_BASE_URL is missing or set to localhost while running on a deployed domain (like Vercel), fallback to Render backend
+const isBrowser = typeof window !== 'undefined';
+const isProductionDomain = isBrowser && !['localhost', '127.0.0.1'].includes(window.location.hostname);
+
+if (!rawBaseUrl || (isProductionDomain && rawBaseUrl.includes('localhost'))) {
+  if (isProductionDomain) {
+    rawBaseUrl = 'https://ampp-rgipt.onrender.com/api';
+  } else {
+    rawBaseUrl = 'http://localhost:5000/api';
+  }
+}
 
 // Normalize URL: remove trailing slash
 let normalizedBaseUrl = rawBaseUrl.replace(/\/$/, '');
