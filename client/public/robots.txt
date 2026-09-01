@@ -1,0 +1,11 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Disallow private and administrative backend paths
+Disallow: /admin
+Disallow: /login
+Disallow: /api/
+
+# Sitemap location
+Sitemap: https://www.ampprgipt.com/sitemap.xml
