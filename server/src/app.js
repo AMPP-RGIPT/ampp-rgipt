@@ -20,6 +20,8 @@ connectDB();
 
 // 2. CORS - Must be very early to handle preflight OPTIONS requests
 const allowedOrigins = [
+  'https://www.ampprgipt.com',
+  'https://ampprgipt.com',
   'https://ampprgipt.vercel.app',
   'https://ampp-rgipt.vercel.app',
   'https://ampp-omega.vercel.app',
@@ -42,8 +44,9 @@ const corsOptions = {
     const normalizedOrigin = origin.replace(/\/$/, '');
     const isExactMatch = allowedOrigins.includes(normalizedOrigin);
     const isVercelDomain = /^https:\/\/(ampp.*|.*ampp.*)\.vercel\.app$/i.test(normalizedOrigin);
+    const isAmppDomain = /^https:\/\/(www\.)?ampprgipt\.(com|org|in|app)$/i.test(normalizedOrigin);
 
-    if (isExactMatch || isVercelDomain) {
+    if (isExactMatch || isVercelDomain || isAmppDomain) {
       callback(null, true);
     } else {
       console.warn('CORS Blocked Origin:', origin);
