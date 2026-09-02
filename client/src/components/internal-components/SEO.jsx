@@ -6,31 +6,31 @@ const SEO_DATA = {
     title: 'AMPP RGIPT | Student Chapter',
     description: 'AMPP RGIPT Student Chapter is a student-led organization at Rajiv Gandhi Institute of Petroleum Technology focused on materials science, corrosion protection, engineering, events, and technical development.',
     canonical: 'https://www.ampprgipt.com/',
-    ogImage: 'https://www.ampprgipt.com/android-chrome-512x512.png',
+    ogImage: 'https://www.ampprgipt.com/favicon.png',
   },
   '/about': {
     title: 'About | AMPP RGIPT',
     description: 'Discover the AMPP RGIPT Student Chapter at Rajiv Gandhi Institute of Petroleum Technology—our mission, purpose, advisory team, leadership, and student community in materials and corrosion engineering.',
     canonical: 'https://www.ampprgipt.com/about',
-    ogImage: 'https://www.ampprgipt.com/android-chrome-512x512.png',
+    ogImage: 'https://www.ampprgipt.com/favicon.png',
   },
   '/events': {
     title: 'Events | AMPP RGIPT',
     description: 'Explore AMPP RGIPT events, workshops, technical seminars, guest lectures, and chapter activities at Rajiv Gandhi Institute of Petroleum Technology.',
     canonical: 'https://www.ampprgipt.com/events',
-    ogImage: 'https://www.ampprgipt.com/android-chrome-512x512.png',
+    ogImage: 'https://www.ampprgipt.com/favicon.png',
   },
   '/team': {
     title: 'Team | AMPP RGIPT',
     description: 'Meet the AMPP RGIPT student chapter team, executive board, committee chairs, and leadership steering technical development and activities.',
     canonical: 'https://www.ampprgipt.com/team',
-    ogImage: 'https://www.ampprgipt.com/android-chrome-512x512.png',
+    ogImage: 'https://www.ampprgipt.com/favicon.png',
   },
   '/contact': {
     title: 'Contact | AMPP RGIPT',
     description: 'Get in touch with the AMPP RGIPT Student Chapter team at Rajiv Gandhi Institute of Petroleum Technology for inquiries, collaborations, and event details.',
     canonical: 'https://www.ampprgipt.com/contact',
-    ogImage: 'https://www.ampprgipt.com/android-chrome-512x512.png',
+    ogImage: 'https://www.ampprgipt.com/favicon.png',
   },
 };
 
@@ -46,7 +46,7 @@ export default function SEO() {
       title: 'AMPP RGIPT | Student Chapter',
       description: 'AMPP RGIPT Student Chapter is a student-led organization at Rajiv Gandhi Institute of Petroleum Technology focused on materials science, corrosion protection, engineering, events, and technical development.',
       canonical: `https://www.ampprgipt.com${path}`,
-      ogImage: 'https://www.ampprgipt.com/android-chrome-512x512.png',
+      ogImage: 'https://www.ampprgipt.com/favicon.png',
     };
 
     // Update document title
