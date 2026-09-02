@@ -43,10 +43,11 @@ function About() {
     <div className={styles.aboutPage}>
 
       <section className={styles.section} style={{ textAlign: 'center', paddingBottom: '40px', willChange: 'transform, opacity' }}>
+        <h1 className="sr-only">About AMPP RGIPT</h1>
         <span className={styles.eyebrow}>Inside the Chapter</span>
-        <h1 className={styles.title} style={{ fontSize: 'clamp(3rem, 10vw, 8rem)' }}>
+        <h2 className={styles.title} style={{ fontSize: 'clamp(3rem, 10vw, 8rem)' }}>
           AMPP–RGIPT
-        </h1>
+        </h2>
         <p className={styles.sharpText} style={{ margin: '0 auto', fontSize: '1.4rem' }}>
           A student-led community exploring materials, corrosion science, and engineering through practical learning, industry interaction, and collaborative projects.
         </p>

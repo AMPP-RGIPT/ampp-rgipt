@@ -9,6 +9,7 @@ import SmoothWrapper    from "./components/internal-components/SmoothWrapper";
 import HeroIntro        from "./components/internal-components/HeroIntro";
 import PageTransition   from "./components/internal-components/PageTransition";
 import ScrollToTop      from "./components/internal-components/ScrollToTop";
+import SEO              from "./components/internal-components/SEO";
 
 import Home             from "./components/Home/home";
 import About            from "./components/About/about";
@@ -322,6 +323,7 @@ export default function App() {
 
   return (
     <>
+      <SEO />
       <ScrollToTop />
       <SmoothWrapper>
         <div className="app">
