@@ -38,7 +38,16 @@ export default function SEO() {
   const location = useLocation();
 
   useEffect(() => {
-    const data = SEO_DATA[location.pathname] || SEO_DATA['/'];
+    // Normalize pathname (strip trailing slash if present, except for root '/')
+    const rawPath = location.pathname;
+    const path = rawPath.length > 1 && rawPath.endsWith('/') ? rawPath.slice(0, -1) : rawPath;
+
+    const data = SEO_DATA[path] || {
+      title: 'AMPP RGIPT | Student Chapter',
+      description: 'AMPP RGIPT Student Chapter is a student-led organization at Rajiv Gandhi Institute of Petroleum Technology focused on materials science, corrosion protection, engineering, events, and technical development.',
+      canonical: `https://www.ampprgipt.com${path}`,
+      ogImage: 'https://www.ampprgipt.com/android-chrome-512x512.png',
+    };
 
     // Update document title
     document.title = data.title;
@@ -54,15 +63,21 @@ export default function SEO() {
       el.setAttribute('content', content);
     };
 
-    // Helper to update link tags (like canonical)
+    // Helper to update link tags (like canonical) and remove duplicate tags
     const updateLink = (rel, href) => {
-      let el = document.querySelector(`link[rel="${rel}"]`);
-      if (!el) {
-        el = document.createElement('link');
+      const existingLinks = document.querySelectorAll(`link[rel="${rel}"]`);
+      if (existingLinks.length > 0) {
+        existingLinks[0].setAttribute('href', href);
+        // Remove any extra duplicate canonical links
+        for (let i = 1; i < existingLinks.length; i++) {
+          existingLinks[i].remove();
+        }
+      } else {
+        const el = document.createElement('link');
         el.setAttribute('rel', rel);
+        el.setAttribute('href', href);
         document.head.appendChild(el);
       }
-      el.setAttribute('href', href);
     };
 
     updateMeta('meta[name="description"]', 'name', 'description', data.description);
