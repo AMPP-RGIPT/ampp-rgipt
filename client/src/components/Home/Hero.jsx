@@ -127,7 +127,7 @@ function Hero({ revealed = false }) {
           <div className={styles.headingBlock}>
             <div ref={barRef} className={styles.bar} aria-hidden="true" style={{ willChange: 'transform' }} />
             <div className={styles.headingWrap}>
-              <h2 style={{ fontSize: 'inherit', fontWeight: 'inherit', margin: 0, padding: 0 }}>
+              <h1>
                 <span ref={line1Ref} className={styles.line1}>
                   A Community of Thinkers,
                 </span>
@@ -138,7 +138,7 @@ function Hero({ revealed = false }) {
                   Driven by{" "}
                   <span className={styles.accent}>Materials</span>.
                 </span>
-              </h2>
+              </h1>
             </div>
           </div>
 
