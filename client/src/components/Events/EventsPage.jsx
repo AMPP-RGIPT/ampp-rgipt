@@ -255,6 +255,7 @@ function EventsPage() {
 
   return (
     <div className={styles.page}>
+      <h1 className="sr-only">AMPP RGIPT Events</h1>
       <div className={styles.verticalLines} style={{ willChange: 'opacity' }}>
         <span></span><span></span><span></span><span></span>
       </div>

@@ -255,6 +255,7 @@ const Section = memo(function Section({ section, globalIndex }) {
 export default function Members() {
   return (
     <main className={styles.page}>
+      <h1 className="sr-only">AMPP RGIPT Team</h1>
       <section className={styles.banner}>
         <div className={styles.bannerContainer}>
           <motion.div

@@ -1,4 +1,5 @@
 import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import styles from "./Footer.module.css";
@@ -180,6 +181,17 @@ export default function Footer() {
               </svg>
             </a>
           </aside>
+
+          <nav className={styles.quickLinksNav} aria-label="Footer navigation">
+            <span className={styles.quickLinksHeading}>Quick Links</span>
+            <ul className={styles.quickLinksList}>
+              <li><Link to="/">Home</Link></li>
+              <li><Link to="/about">About</Link></li>
+              <li><Link to="/events">Events</Link></li>
+              <li><Link to="/team">Team</Link></li>
+              <li><Link to="/contact">Contact</Link></li>
+            </ul>
+          </nav>
         </div>
 
         <div ref={linksRef} className={styles.footerLinks}>

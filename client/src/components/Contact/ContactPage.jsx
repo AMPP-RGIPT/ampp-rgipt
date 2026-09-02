@@ -117,13 +117,14 @@ export default function ContactPage() {
         <div className={styles.inner}>
 
           <div className={styles.intro}>
+            <h1 className="sr-only">Contact AMPP RGIPT</h1>
             <p ref={eyebrowRef} className={styles.eyebrow}>Get in Touch</p>
 
-            <h1 ref={titleRef} className={styles.title}>
+            <h2 ref={titleRef} className={styles.title}>
               Let's build<br />
               something<br />
               <span className={styles.accent}>together.</span>
-            </h1>
+            </h2>
 
             <p ref={subtitleRef} className={styles.subtitle}>
               Have questions or ready to collaborate with our chapter on advanced

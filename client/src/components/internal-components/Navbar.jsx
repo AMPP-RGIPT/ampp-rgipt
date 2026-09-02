@@ -8,7 +8,7 @@ import { smoothScrollTo } from '../../lib/useLenis';
 
 const NAV_LINKS = [
   { label: 'Home',     href: '/',       type: 'route' },
-  { label: 'About Us', href: '/about',   type: 'route' },
+  { label: 'About',    href: '/about',   type: 'route' },
   { label: 'Team',     href: '/team',    type: 'route' },
   { label: 'Events',   href: '/events',  type: 'route' },
   { label: 'Contact',  href: '/contact', type: 'route' },

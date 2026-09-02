@@ -59,7 +59,7 @@ function UpcomingEvents({ events, isAuthenticated, onEdit, onDelete, onToggleSta
               </div>
             </div>
 
-            <h1 className={styles.heroTitle}>{heroEvent.title}</h1>
+            <h2 className={styles.heroTitle}>{heroEvent.title}</h2>
             <p className={styles.heroDesc}>{heroEvent.description}</p>
 
             {heroEvent.registrationLink && (

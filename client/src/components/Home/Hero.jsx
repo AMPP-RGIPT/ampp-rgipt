@@ -123,10 +123,11 @@ function Hero({ revealed = false }) {
         </div>
 
         <div ref={contentRef} className={styles.content} style={{ willChange: 'transform, opacity' }}>
+          <h1 className="sr-only">AMPP RGIPT | Student Chapter</h1>
           <div className={styles.headingBlock}>
             <div ref={barRef} className={styles.bar} aria-hidden="true" style={{ willChange: 'transform' }} />
             <div className={styles.headingWrap}>
-              <h1>
+              <h2 style={{ fontSize: 'inherit', fontWeight: 'inherit', margin: 0, padding: 0 }}>
                 <span ref={line1Ref} className={styles.line1}>
                   A Community of Thinkers,
                 </span>
@@ -137,7 +138,7 @@ function Hero({ revealed = false }) {
                   Driven by{" "}
                   <span className={styles.accent}>Materials</span>.
                 </span>
-              </h1>
+              </h2>
             </div>
           </div>
 
