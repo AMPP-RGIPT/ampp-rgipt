@@ -9,16 +9,17 @@ const popSound = new Howl({
 });
 
 // Import local gallery images with exact case-sensitive extensions
-import img1 from '../../assets/gallery/1.JPG';
-import img2 from '../../assets/gallery/2.JPG';
-import img3 from '../../assets/gallery/3.jpg';
-import img4 from '../../assets/gallery/4.jpg';
-import img5 from '../../assets/gallery/5.jpg';
+import img1 from '../../assets/gallery/1.jpeg';
+import img2 from '../../assets/gallery/2.jpeg';
+import img3 from '../../assets/gallery/3.jpeg';
+import img4 from '../../assets/gallery/4.jpeg';
+import img5 from '../../assets/gallery/5.jpeg';
 import img6 from '../../assets/gallery/6.jpg';
-import img7 from '../../assets/gallery/7.jpg';
+import img7 from '../../assets/gallery/7.jpeg';
 import img8 from '../../assets/gallery/8.jpg';
-import img9 from '../../assets/gallery/9.JPG';
-import img10 from '../../assets/gallery/10.JPG';
+import img9 from '../../assets/gallery/9.jpeg';
+import img10 from '../../assets/gallery/10.jpeg';
+import img11 from '../../assets/gallery/11.jpeg';
 
 
 const galleryImages = [
@@ -31,7 +32,8 @@ const galleryImages = [
   { id: 7, url: img7 },
   { id: 8, url: img8 },
   { id: 9, url: img9 },
-  { id: 10, url: img10 }
+  { id: 10, url: img10 },
+  { id: 11, url: img11 }
 ];
 
 // Double the images array to allow a longer, continuous scrolling experience
