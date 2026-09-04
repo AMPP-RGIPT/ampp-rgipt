@@ -7,11 +7,11 @@ import amppImg from '../../assets/ampp.png';
 import { smoothScrollTo } from '../../lib/useLenis';
 
 const NAV_LINKS = [
-  { label: 'Home',     href: '/',       type: 'route' },
-  { label: 'About',    href: '/about',   type: 'route' },
-  { label: 'Team',     href: '/team',    type: 'route' },
-  { label: 'Events',   href: '/events',  type: 'route' },
-  { label: 'Contact',  href: '/contact', type: 'route' },
+  { label: 'Home', href: '/', type: 'route' },
+  { label: 'About', href: '/about', type: 'route' },
+  { label: 'Team', href: '/team', type: 'route' },
+  { label: 'Events', href: '/events', type: 'route' },
+  { label: 'Contact', href: '/contact', type: 'route' },
 ];
 
 function Navbar() {
@@ -20,9 +20,9 @@ function Navbar() {
   const location = useLocation();
   const navigate = useNavigate();
 
-  const logoRef      = useRef(null);
-  const pillRef      = useRef(null);
-  const linkRefs     = useRef([]);
+  const logoRef = useRef(null);
+  const pillRef = useRef(null);
+  const linkRefs = useRef([]);
   const hamburgerRef = useRef(null);
 
   const isMobileBreakpoint = () =>
@@ -33,7 +33,7 @@ function Navbar() {
   const [isMobile, setIsMobile] = useState(isMobileBreakpoint);
 
   useLayoutEffect(() => {
-    const query  = window.matchMedia("(max-width: 540px)");
+    const query = window.matchMedia("(max-width: 540px)");
     const update = (e) => setIsMobile(e.matches);
     query.addEventListener("change", update);
     return () => query.removeEventListener("change", update);

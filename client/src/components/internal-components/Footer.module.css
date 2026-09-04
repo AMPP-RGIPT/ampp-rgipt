@@ -68,9 +68,10 @@
 }
 
 .brandLogo {
-  width: 80px;
+  width: 150px;
   height: auto;
   object-fit: contain;
+  margin-bottom: 6px;
   transition: transform 0.45s var(--ease-spring), opacity 0.3s ease;
   transform-origin: left;
 }
@@ -422,7 +423,6 @@
   .socialCard,
   .footerNote { opacity: 1 !important; }
 
-  .footerBrand h2 { font-size: 1.15rem; }
   .footerBrand > p { font-size: 0.95rem; line-height: 1.6; }
   .footerBrand aside p { font-size: 0.88rem; }
   .footerBrand aside a, .locationLink { font-size: 0.9rem; }

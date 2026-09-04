@@ -3,21 +3,21 @@ import { Link } from "react-router-dom";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import styles from "./Footer.module.css";
-import logoImg from "../../assets/logo.png";
+import logoImg from "../../assets/ampp.png";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Footer() {
-  const footerRef  = useRef(null);
-  const topBarRef  = useRef(null);
-  const brandRef   = useRef(null);
-  const linksRef   = useRef(null);
-  const noteRef    = useRef(null);
-  const bgWrapRef  = useRef(null);
-  const bgFillRef  = useRef(null);
-  const bgTextRef  = useRef(null);
-  const link1Ref   = useRef(null);
-  const link2Ref   = useRef(null);
+  const footerRef = useRef(null);
+  const topBarRef = useRef(null);
+  const brandRef = useRef(null);
+  const linksRef = useRef(null);
+  const noteRef = useRef(null);
+  const bgWrapRef = useRef(null);
+  const bgFillRef = useRef(null);
+  const bgTextRef = useRef(null);
+  const link1Ref = useRef(null);
+  const link2Ref = useRef(null);
 
   const lerpRef = useRef({ current: 44, target: 44, raf: null });
 
@@ -29,13 +29,13 @@ export default function Footer() {
   const [isMobile, setIsMobile] = useState(getIsMobile);
 
   useLayoutEffect(() => {
-    const query  = window.matchMedia("(max-width: 768px)");
+    const query = window.matchMedia("(max-width: 768px)");
     const update = (e) => setIsMobile(e.matches);
     if (query.addEventListener) query.addEventListener("change", update);
-    else                        query.addListener(update);
+    else query.addListener(update);
     return () => {
       if (query.removeEventListener) query.removeEventListener("change", update);
-      else                           query.removeListener(update);
+      else query.removeListener(update);
     };
   }, []);
 
@@ -47,8 +47,8 @@ export default function Footer() {
 
       gsap.set(
         [topBarRef.current, brandRef.current, linksRef.current,
-         link1Ref.current, link2Ref.current, noteRef.current,
-         bgFillRef.current, bgTextRef.current],
+        link1Ref.current, link2Ref.current, noteRef.current,
+        bgFillRef.current, bgTextRef.current],
         { clearProps: "all" }
       );
       return;
@@ -66,41 +66,53 @@ export default function Footer() {
 
       gsap.fromTo(topBarRef.current,
         { scaleX: 0 },
-        { scaleX: 1, duration: 1.4, ease: "power4.out",
-          scrollTrigger: trigger }
+        {
+          scaleX: 1, duration: 1.4, ease: "power4.out",
+          scrollTrigger: trigger
+        }
       );
 
       gsap.fromTo(brandRef.current,
         { opacity: 0, x: -24 },
-        { opacity: 1, x: 0, duration: 1.1, ease: "power4.out", delay: 0.1,
-          scrollTrigger: trigger }
+        {
+          opacity: 1, x: 0, duration: 1.1, ease: "power4.out", delay: 0.1,
+          scrollTrigger: trigger
+        }
       );
 
       gsap.fromTo(linksRef.current,
         { opacity: 0, y: 20 },
-        { opacity: 1, y: 0, duration: 1.0, ease: "power4.out", delay: 0.2,
-          scrollTrigger: trigger }
+        {
+          opacity: 1, y: 0, duration: 1.0, ease: "power4.out", delay: 0.2,
+          scrollTrigger: trigger
+        }
       );
 
       gsap.fromTo(
         [link1Ref.current, link2Ref.current],
         { opacity: 0, y: 12 },
-        { opacity: 1, y: 0, duration: 0.8, ease: "power3.out",
+        {
+          opacity: 1, y: 0, duration: 0.8, ease: "power3.out",
           stagger: 0.12, delay: 0.35,
-          scrollTrigger: trigger }
+          scrollTrigger: trigger
+        }
       );
 
       gsap.fromTo(noteRef.current,
         { opacity: 0, x: 20 },
-        { opacity: 1, x: 0, duration: 1.1, ease: "power4.out", delay: 0.15,
-          scrollTrigger: trigger }
+        {
+          opacity: 1, x: 0, duration: 1.1, ease: "power4.out", delay: 0.15,
+          scrollTrigger: trigger
+        }
       );
 
       gsap.fromTo(
         [bgFillRef.current, bgTextRef.current],
         { opacity: 0, y: "30%" },
-        { opacity: 1, y: "20%", duration: 1.5, ease: "power4.out", delay: 0.4,
-          scrollTrigger: trigger }
+        {
+          opacity: 1, y: "20%", duration: 1.5, ease: "power4.out", delay: 0.4,
+          scrollTrigger: trigger
+        }
       );
 
     }, footer);
@@ -118,8 +130,8 @@ export default function Footer() {
     const footer = footerRef.current;
     if (!footer || isMobile) return;
 
-    const lerp         = lerpRef.current;
-    const LERP_FACTOR  = 0.055;
+    const lerp = lerpRef.current;
+    const LERP_FACTOR = 0.055;
 
     function lerpLoop() {
       lerp.current += (lerp.target - lerp.current) * LERP_FACTOR;
@@ -128,8 +140,8 @@ export default function Footer() {
     }
 
     function onMouseMove(e) {
-      const rect  = footer.getBoundingClientRect();
-      const dy    = Math.max(Math.min((e.clientY - rect.top) / rect.height, 1), 0);
+      const rect = footer.getBoundingClientRect();
+      const dy = Math.max(Math.min((e.clientY - rect.top) / rect.height, 1), 0);
       lerp.target = (150 - 20) * dy + 20;
     }
 
@@ -138,12 +150,12 @@ export default function Footer() {
     }
 
     lerp.raf = requestAnimationFrame(lerpLoop);
-    footer.addEventListener("mousemove",  onMouseMove,  { passive: true });
+    footer.addEventListener("mousemove", onMouseMove, { passive: true });
     footer.addEventListener("mouseleave", onMouseLeave, { passive: true });
 
     return () => {
       cancelAnimationFrame(lerp.raf);
-      footer.removeEventListener("mousemove",  onMouseMove);
+      footer.removeEventListener("mousemove", onMouseMove);
       footer.removeEventListener("mouseleave", onMouseLeave);
     };
   }, [isMobile]);
@@ -157,7 +169,6 @@ export default function Footer() {
 
         <div ref={brandRef} className={styles.footerBrand}>
           <img src={logoImg} alt="AMPP RGIPT Logo" className={styles.brandLogo} />
-          <h2>AMPP-RGIPT</h2>
           <aside>
             <p>
               Rajiv Gandhi Institute of Petroleum Technology<br />
@@ -172,7 +183,7 @@ export default function Footer() {
             >
               <span>View Location</span>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                   fill="none" stroke="currentColor" aria-hidden="true">
+                fill="none" stroke="currentColor" aria-hidden="true">
                 <path strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
                   d="M12 2C8.13 2 5 5.13 5 9c0 3.87 7 13 7 13s7-9.13 7-13
                      c0-3.87-3.13-7-7-7zM12 11c1.1 0 2-.9 2-2s-.9-2-2-2
