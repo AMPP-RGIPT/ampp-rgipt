@@ -285,7 +285,8 @@ export default function Footer() {
               </a>
             </div>
           </div>
-                         <div style={{ borderTop: '1px solid rgba(139,69,19,0.15)', marginTop: '20px', paddingTop: '20px' }}>
+                                  </div>
+          <div style={{ borderTop: '1px solid rgba(139,69,19,0.15)', marginTop: '20px', paddingTop: '20px' }}>
             <div className={styles.devProfile}>
               <span className={styles.devName}>Yashraj Singh</span>
               <div className={styles.devSocials}>
@@ -298,6 +299,14 @@ export default function Footer() {
               </div>
             </div>
           </div>
+        </div>
+
+      </div>
+
+      <div ref={bgWrapRef} className={styles.footerBgWrap} aria-hidden="true">
+        <span ref={bgFillRef} className={styles.footerBgFill}>AMPP</span>
+        <span ref={bgTextRef} className={styles.footerBgText}>AMPP</span>
+      </div>
       <div ref={bgWrapRef} className={styles.footerBgWrap} aria-hidden="true">
         <span ref={bgFillRef} className={styles.footerBgFill}>AMPP</span>
         <span ref={bgTextRef} className={styles.footerBgText}>AMPP</span>
