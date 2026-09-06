@@ -71,9 +71,7 @@ Ensure all profile information reflects the current session.
 
 Maintain the developer section on the website's footer as follows:
 
-* The **Actual Developer** should remain unchanged to acknowledge the original developer of the project.
-* Add the **Current Technical Chair/Developer** for the ongoing session below the original developer.
-* Update only the current session details while keeping the original developer's name permanently.
+* The **Actual Developers** should remain unchanged to acknowledge the original developers of the project.
 
 
 ---
