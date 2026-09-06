@@ -284,7 +284,7 @@ export default function Footer() {
                 </svg>
               </a>
             </div>
-                      </div>
+          </div>
           <div style={{ marginTop: '24px', paddingTop: '18px', borderTop: '1px solid rgba(139,69,19,0.2)' }}>
             <div className={styles.devProfile}>
               <span className={styles.devName}>Yashraj Singh</span>
@@ -302,20 +302,6 @@ export default function Footer() {
 
       </div>
 
-      <div ref={bgWrapRef} className={styles.footerBgWrap} aria-hidden="true">
-        <span ref={bgFillRef} className={styles.footerBgFill}>AMPP</span>
-        <span ref={bgTextRef} className={styles.footerBgText}>AMPP</span>
-      </div>
-      </div>
-
-      <div ref={bgWrapRef} className={styles.footerBgWrap} aria-hidden="true">
-        <span ref={bgFillRef} className={styles.footerBgFill}>AMPP</span>
-        <span ref={bgTextRef} className={styles.footerBgText}>AMPP</span>
-      </div>
-      <div ref={bgWrapRef} className={styles.footerBgWrap} aria-hidden="true">
-        <span ref={bgFillRef} className={styles.footerBgFill}>AMPP</span>
-        <span ref={bgTextRef} className={styles.footerBgText}>AMPP</span>
-      </div>
       <div ref={bgWrapRef} className={styles.footerBgWrap} aria-hidden="true">
         <span ref={bgFillRef} className={styles.footerBgFill}>AMPP</span>
         <span ref={bgTextRef} className={styles.footerBgText}>AMPP</span>
