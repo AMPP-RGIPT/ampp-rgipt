@@ -300,13 +300,8 @@
   top: 2px;
   bottom: 2px;
   width: 3px;
-  background: linear-gradient(to bottom, var(--rust), rgba(160, 120, 64, 0.4), rgba(139, 58, 30, 0.15));
+  background: var(--rust);
   border-radius: 2px;
-  transition: background 0.3s ease;
-}
-
-.footerNote:hover::before {
-  background: linear-gradient(to bottom, var(--gold), var(--rust));
 }
 
 .noteLabel {
