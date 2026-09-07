@@ -316,47 +316,77 @@
 .devProfile {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
 }
 
 .devName {
-  font-size: 1.45rem;
+  font-size: 1.65rem;
   font-weight: 700;
   color: var(--rust-deep);
   letter-spacing: -0.01em;
   font-family: 'Fraunces', serif;
-  line-height: 1.2;
+  line-height: 1.25;
+  margin-bottom: 4px;
+}
+
+.contactSection {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.contactMeLabel {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.devDivider {
+  margin-top: 28px;
+  padding-top: 22px;
+  border-top: 1px solid rgba(139, 69, 19, 0.18);
 }
 
 .devSocials {
   display: flex;
-  gap: 14px;
+  gap: 18px;
   align-items: center;
-  margin-top: 2px;
+  margin-top: 4px;
 }
 
 .devSocials a {
   color: var(--rust-deep);
   opacity: 0.85;
   transition: color 0.25s ease, opacity 0.25s ease, transform 0.25s var(--ease-spring);
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 4px;
+  padding: 6px;
   background: transparent;
   border: none;
+  text-decoration: none;
+  position: relative;
+  z-index: 10;
+  cursor: pointer;
+  pointer-events: auto;
 }
 
 .devSocials a svg {
   width: 20px;
   height: 20px;
   stroke-width: 2px;
+  flex-shrink: 0;
 }
 
 .devSocials a:hover {
   color: var(--rust);
   opacity: 1;
-  transform: translateY(-2px) scale(1.15);
+  background: transparent;
+  transform: translateY(-2px) scale(1.18);
+  box-shadow: none;
 }
 
 .footerBgWrap {
@@ -432,6 +462,7 @@
     padding-left: 16px;
   }
 
+  .devName { font-size: 1.55rem; }
   .noteLabel { font-size: 0.8rem; }
   .footerNote p { font-size: 0.9rem; line-height: 1.6; }
 
