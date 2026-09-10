@@ -15,10 +15,10 @@ gsap.registerPlugin(ScrollTrigger);
 
 
 const teamContacts = [
-  { name: "Test-1",      role: "Faculty Advisor",     email: "test-1@rgipt.ac.in",    phone: "+91-0000000000" },
-  { name: "Test-2", role: "Chairman",           email: "test-2@rgipt.ac.in",  phone: "+91-0000000000" },
-  { name: "Test-3",    role: "Co-Chairman",      email: "test-3@rgipt.ac.in",  phone: "+91-0000000000" },
-  { name: "Test-4",           role: "Sec", email: "test-4@rgipt.ac.in",  phone: "+91-0000000000" },
+  { name: "Dr. Deepak Dwivedi",    role: "Faculty Advisor",  email: "ddwivedi@rgipt.ac.in",      phone: "+91 535 2704 860" },
+  { name: "Saurabh Kumar",         role: "President",        email: "Saurabhk22ce@rgipt.ac.in",  phone: "+91 70114 57500" },
+  { name: "Sanjay Thommandru",     role: "Vice Chair",       email: "23ce3053@rgipt.ac.in",      phone: "+91 77020 07831" },
+  { name: "Vinayak Awasthi",       role: "Co-Vice Chair",    email: "23ce3060@rgipt.ac.in",      phone: "+91 63888 11624" },
 ];
 
 export default function ContactPage() {
