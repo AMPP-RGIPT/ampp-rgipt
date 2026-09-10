@@ -21,9 +21,9 @@ function Mentor() {
           <span className={styles.eyebrow}>Faculty Advisor</span>
           <h2 className={styles.title}>Dr. Deepak Dwivedi</h2>
           <p className={styles.sharpText}>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                      <p className={styles.sharpText}>
+            Dr. Deepak Dwivedi is an Assistant Professor at RGIPT's Department of Chemical and Biochemical Engineering. With a PhD from Curtin University (in collaboration with Cambridge and ANSTO, Australia), postdoctoral experience at the European Synchrotron Radiation Facility in Grenoble and prior recognition as a Research Scientist at Stanford University, his work bridges fundamental materials science with practical solutions for the energy and petrochemical industries. His research spans corrosion mitigation in pipelines, battery degradation, fuel cells, and advanced materials characterization using synchrotron and neutron techniques. He is the Assistant Dean for Research and Development at RGIPT, manages the Corrosion Engineering Laboratory, and serves on editorial boards of high-impact journals.
           </p>
-          <a
             href="https://sites.google.com/rgipt.ac.in/drdeepakdwivedicorrosionandsur/home"
             target="_blank"
             rel="noopener noreferrer"
@@ -67,15 +67,8 @@ function Mentor() {
           <div className={styles.textSide}>
             <span className={styles.eyebrow}>Co-Faculty Advisor</span>
             <h2 className={styles.title}>Dr. Arvind Singh</h2>
-            <p className={styles.sharpText}>
-              Lorem Ipsum is simply dummy text of the
-               printing and typesetting industry. Lorem Ipsu
-               m has been the industry's standard dummy text ever
-                since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book. It has
-                survived not only five centuries, but also the leap into electronic
-                 typesetting, remaining essentially unchanged. It was popularised in the
-                  1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                   <p className={styles.sharpText}>
+              Dr. Arvind Singh is a faculty member in the Department of Chemical Engineering at Rajiv Gandhi Institute of Petroleum Technology (RGIPT), where he has been serving since January 2022. He completed his Ph.D. and M.Tech. from IIT (BHU), Varanasi, and his research areas include energy materials, hydrogen production, catalysis, and bioremediation, with a focus on the development and characterization of materials and processes for energy and environmental applications. He also serves as the Co-Advisor of the AMPP Student Chapter at RGIPT, where he mentors students and supports technical activities related to corrosion, materials protection, and professional development.
             </p>
             <a
               href="https://www.linkedin.com/in/arvind-singh-52942240/"
