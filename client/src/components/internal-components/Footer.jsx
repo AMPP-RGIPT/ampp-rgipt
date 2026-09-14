@@ -1,5 +1,4 @@
 import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
-import { Link } from "react-router-dom";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import styles from "./Footer.module.css";
@@ -175,6 +174,15 @@ export default function Footer() {
               Mubarakhpur Mukhetia More, Bahadurpur, Jais<br />
               Post Harbanshganj, Amethi – 229304, Uttar Pradesh
             </p>
+            <div className={styles.mapWrapper}>
+              <iframe
+                title="RGIPT Location Map"
+                src="https://maps.google.com/maps?q=Rajiv%20Gandhi%20Institute%20of%20Petroleum%20Technology%20Jais&t=&z=14&ie=UTF8&iwloc=&output=embed"
+                className={styles.desktopMap}
+                loading="lazy"
+                allowFullScreen
+              />
+            </div>
             <a
               href="https://maps.app.goo.gl/sagyZbCd2uepRG769"
               target="_blank"
@@ -192,17 +200,6 @@ export default function Footer() {
               </svg>
             </a>
           </aside>
-
-          <nav className={styles.quickLinksNav} aria-label="Footer navigation">
-            <span className={styles.quickLinksHeading}>Quick Links</span>
-            <ul className={styles.quickLinksList}>
-              <li><Link to="/">Home</Link></li>
-              <li><Link to="/about">About</Link></li>
-              <li><Link to="/events">Events</Link></li>
-              <li><Link to="/team">Team</Link></li>
-              <li><Link to="/contact">Contact</Link></li>
-            </ul>
-          </nav>
         </div>
 
         <div ref={linksRef} className={styles.footerLinks}>
@@ -268,7 +265,7 @@ export default function Footer() {
           <div className={styles.devProfile}>
             <span className={styles.devName}>Rudraksh Chamoli</span>
             <div className={styles.contactSection}>
-              <span className={styles.contactMeLabel}>Contact Me</span>
+              <span className={styles.contactMeLabel}>CONTACT</span>
               <div className={styles.devSocials}>
                 <a href="https://github.com/chamoli-rudraksh" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
@@ -290,7 +287,7 @@ export default function Footer() {
             <div className={styles.devProfile}>
               <span className={styles.devName}>Yashraj Singh</span>
               <div className={styles.contactSection}>
-                <span className={styles.contactMeLabel}>Contact Me</span>
+                <span className={styles.contactMeLabel}>CONTACT</span>
                 <div className={styles.devSocials}>
                   <a href="https://github.com/yashmps2809-hub" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
