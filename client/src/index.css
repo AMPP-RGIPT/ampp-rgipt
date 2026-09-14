@@ -157,7 +157,7 @@ body {
 .sound-toggle-btn {
   position: fixed;
   top: 24px;
-  right: 40px;
+  right: 360px;
   z-index: 10001;
   display: flex;
   align-items: center;
@@ -211,10 +211,10 @@ body {
 @media (max-width: 768px) {
   .sound-toggle-btn {
     top: 24px;
-    right: 88px;
+    right: 170px;
     padding: 0;
-    width: 44px;
-    height: 44px;
+    width: 42px;
+    height: 42px;
     border-radius: 50%;
     justify-content: center;
     box-shadow: 0 3px 15px rgba(139, 58, 30, 0.1), 4px 4px 0px rgba(139, 58, 30, 0.06);

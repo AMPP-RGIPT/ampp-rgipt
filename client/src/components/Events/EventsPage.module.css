@@ -38,75 +38,106 @@
 }
 
 .adminTrigger {
-  position: absolute;
-  top: 40px;
-  right: 4rem;
-  z-index: 100;
+  position: fixed;
+  top: 24px;
+  right: 177px;
+  z-index: 1001;
+  pointer-events: all;
+  transition: right 0.35s var(--ease-spring);
+}
+
+:global(body[data-audio-muted="true"]) .adminTrigger {
+  right: 237px;
 }
 
 .adminBtnSmall {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--nav-height);
+  padding: 0 1.5rem;
   background: var(--cream);
-  border: 1px solid var(--border);
+  border: 1.5px solid var(--rust);
   color: var(--rust);
-  padding: 0.6rem 1.2rem;
   border-radius: 4px;
   cursor: pointer;
-  font-size: 0.75rem;
-  font-weight: 700;
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  transition: all 0.3s var(--ease);
-  box-shadow: 4px 4px 0px rgba(139, 58, 30, 0.06);
+  letter-spacing: 1.5px;
+  white-space: nowrap;
+  transition: transform 0.25s var(--ease-spring), background 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 6px 6px 0px rgba(139, 58, 30, 0.06);
 }
 
 .adminBtnSmall:hover {
   background: var(--rust);
-  color: var(--cream);
-  transform: translate(-2px, -2px);
-  box-shadow: 6px 6px 0px rgba(139, 58, 30, 0.1);
+  color: #fff;
+  transform: scale(1.06) translate(-2px, -2px);
+  box-shadow: 8px 8px 0px rgba(139, 58, 30, 0.16);
 }
 
 .adminControls {
   display: flex;
-  gap: 1rem;
+  align-items: center;
+  gap: 12px;
+  height: var(--nav-height);
 }
 
 .addBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--nav-height);
+  padding: 0 1.4rem;
   background: var(--rust);
-  color: var(--cream);
-  border: none;
-  padding: 0.8rem 1.5rem;
+  color: #fff;
+  border: 1.5px solid var(--rust);
   border-radius: 4px;
-  font-weight: 700;
-  font-size: 0.8rem;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 800;
+  font-size: 0.72rem;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
+  white-space: nowrap;
   cursor: pointer;
-  transition: all 0.3s var(--ease-spring);
-  box-shadow: 6px 6px 0px rgba(139, 58, 30, 0.1);
+  transition: transform 0.25s var(--ease-spring), background 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 6px 6px 0px rgba(139, 58, 30, 0.12);
 }
 
 .addBtn:hover {
+  background: var(--rust-deep);
   transform: translate(-2px, -2px);
-  box-shadow: 8px 8px 0px rgba(139, 58, 30, 0.15);
+  box-shadow: 8px 8px 0px rgba(139, 58, 30, 0.18);
 }
 
 .logoutBtn {
-  background: transparent;
-  border: 1.5px dotted var(--rust);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--nav-height);
+  padding: 0 1.4rem;
+  background: var(--cream);
+  border: 1.5px solid var(--rust);
   color: var(--rust);
-  padding: 0.8rem 1.5rem;
   border-radius: 4px;
-  font-weight: 700;
-  font-size: 0.8rem;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 800;
+  font-size: 0.72rem;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
+  white-space: nowrap;
   cursor: pointer;
-  transition: all 0.3s var(--ease);
+  transition: transform 0.25s var(--ease-spring), background 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 6px 6px 0px rgba(139, 58, 30, 0.06);
 }
 
 .logoutBtn:hover {
-  background: rgba(139, 58, 30, 0.05);
+  background: var(--rust);
+  color: #fff;
+  transform: translate(-2px, -2px);
+  box-shadow: 8px 8px 0px rgba(139, 58, 30, 0.12);
 }
 
 .sectionSpacer {
@@ -229,6 +260,14 @@
 }
 
 @media (max-width: 768px) {
+  .adminTrigger {
+    position: relative;
+    top: auto;
+    right: auto;
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: flex-end;
+  }
   .skeletonHero {
     flex-direction: column;
     gap: 2rem;

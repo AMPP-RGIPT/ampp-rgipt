@@ -67,7 +67,7 @@ function Membership() {
           Learn, collaborate, and contribute within a community focused on technical growth, practical exposure, and student-driven initiatives.
         </p>
         <a
-          href="https://www.ampp.org/"
+          href="https://docs.google.com/forms/d/e/1FAIpQLScKrCCWZe_Ys2WlIgnwmKQeWMuo03MTGGT13HNsCZqNcaRXEQ/viewform?usp=dialog"
           target="_blank"
           rel="noopener noreferrer"
           className={styles.ctaButton}

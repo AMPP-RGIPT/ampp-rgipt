@@ -13,7 +13,7 @@
 .teamSection {
   position: relative;
   font-family: 'Raleway', sans-serif;
-  padding: 80px 0 100px;
+  padding: 20px 0 80px;
   overflow: hidden;
   background: var(--cream);
 }
@@ -24,9 +24,9 @@
   text-transform: uppercase;
   letter-spacing: 0.32em;
   color: var(--gold);
-  padding: 60px 60px 36px;
+  padding: 20px 60px 24px;
   margin: 0;
-  margin-bottom:1rem;
+  margin-bottom: 0.5rem;
   opacity: 0;
 }
 
@@ -157,7 +157,7 @@
 }
 
 @media (max-width: 768px) {
-  .eyebrow   { padding: 40px 20px 28px; font-size: 0.9rem; }
+  .eyebrow   { padding: 20px 20px 16px; font-size: 0.9rem; }
   .teamRow   { height: clamp(70px, 16vw, 100px); }
   .teamName  { font-size: clamp(1.6rem, 6.5vw, 2.5rem); }
   .marqueeText { font-size: clamp(1.6rem, 6.5vw, 2.5rem); }

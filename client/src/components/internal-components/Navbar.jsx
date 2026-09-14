@@ -14,7 +14,9 @@ const NAV_LINKS = [
   { label: 'Contact', href: '/contact', type: 'route' },
 ];
 
-function Navbar() {
+const REGISTER_LINK = "https://docs.google.com/forms/d/e/1FAIpQLScKrCCWZe_Ys2WlIgnwmKQeWMuo03MTGGT13HNsCZqNcaRXEQ/viewform?usp=dialog";
+
+function Navbar({ isAudioMuted, handleUnmute }) {
 
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
@@ -22,6 +24,7 @@ function Navbar() {
 
   const logoRef = useRef(null);
   const pillRef = useRef(null);
+  const registerBtnRef = useRef(null);
   const linkRefs = useRef([]);
   const hamburgerRef = useRef(null);
 
@@ -41,7 +44,7 @@ function Navbar() {
 
   useEffect(() => {
     if (isMobile) {
-      gsap.set([logoRef.current, pillRef.current, hamburgerRef.current, ...linkRefs.current], { clearProps: "all" });
+      gsap.set([logoRef.current, pillRef.current, hamburgerRef.current, registerBtnRef.current, ...linkRefs.current], { clearProps: "all" });
       return;
     }
 
@@ -49,6 +52,7 @@ function Navbar() {
       const tl = gsap.timeline({ defaults: { ease: "power4.out" } });
       tl.fromTo(pillRef.current, { opacity: 0, y: -22 }, { opacity: 1, y: 0, duration: 0.75, delay: 0.15 })
         .fromTo(logoRef.current, { opacity: 0, x: -16 }, { opacity: 1, x: 0, duration: 0.7 }, "-=0.65")
+        .fromTo(registerBtnRef.current, { opacity: 0, y: -16 }, { opacity: 1, y: 0, duration: 0.55 }, "-=0.65")
         .fromTo(hamburgerRef.current, { opacity: 0, y: -16 }, { opacity: 1, y: 0, duration: 0.55 }, "-=0.65")
         .fromTo(linkRefs.current, { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.45, stagger: 0.08, ease: "power3.out" }, "-=0.45");
     });
@@ -113,18 +117,41 @@ function Navbar() {
             ))}
           </ul>
         </nav>
-        <button
-          ref={hamburgerRef}
-          className={`${styles.hamburger} ${menuOpen ? styles.open : ''}`}
-          onClick={() => setMenuOpen(prev => !prev)}
-          aria-label={menuOpen ? 'Close menu' : 'Open menu'}
-          aria-expanded={menuOpen}
-          style={{ willChange: 'opacity, transform' }}
-        >
-          <span className={styles.bar} />
-          <span className={styles.bar} />
-          <span className={styles.bar} />
-        </button>
+        <div className={styles.navRight}>
+          <a
+            ref={registerBtnRef}
+            href={REGISTER_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.registerBtn}
+            style={{ willChange: 'opacity, transform' }}
+          >
+            Register
+          </a>
+          {isAudioMuted && (
+            <button
+              className={styles.soundToggleBtn}
+              onClick={handleUnmute}
+              aria-label="Unmute sound"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                <path d="M6.717 3.55A.5.5 0 0 1 7 4v8a.5.5 0 0 1-.812.39L3.825 10.5H1.5A.5.5 0 0 1 1 10V6a.5.5 0 0 1 .5-.5h2.325l2.363-1.89a.5.5 0 0 1 .529-.06zm7.137 2.096a.5.5 0 0 1 0 .708L12.207 8l1.647 1.646a.5.5 0 0 1-.708.708L11.5 8.707l-1.646 1.647a.5.5 0 0 1-.708-.708L10.793 8 9.146 6.354a.5.5 0 1 1 .708-.708L11.5 7.293l1.646-1.647a.5.5 0 0 1 .708 0z" />
+              </svg>
+            </button>
+          )}
+          <button
+            ref={hamburgerRef}
+            className={`${styles.hamburger} ${menuOpen ? styles.open : ''}`}
+            onClick={() => setMenuOpen(prev => !prev)}
+            aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+            aria-expanded={menuOpen}
+            style={{ willChange: 'opacity, transform' }}
+          >
+            <span className={styles.bar} />
+            <span className={styles.bar} />
+            <span className={styles.bar} />
+          </button>
+        </div>
       </header>
       <nav id="mobile-menu" aria-label="Mobile navigation" aria-hidden={!menuOpen}>
         <ul className={`${styles.mobileMenu} ${menuOpen ? styles.open : ''}`}>
