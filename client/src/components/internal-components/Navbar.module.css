@@ -316,18 +316,7 @@
     box-shadow: 4px 4px 0px rgba(139, 58, 30, 0.1);
   }
   .soundToggleBtn {
-    height: 42px;
-    padding: 0;
-    width: 42px;
-    border-radius: 50%;
-    justify-content: center;
-  }
-  .soundToggleBtn span {
-    display: none;
-  }
-  .soundToggleBtn svg {
-    width: 16px;
-    height: 16px;
+    display: none !important;
   }
   .hamburger {
     display: flex;
@@ -345,10 +334,6 @@
     padding: 0 0.8rem;
     font-size: 0.62rem;
     letter-spacing: 0.8px;
-  }
-  .soundToggleBtn {
-    height: 38px;
-    width: 38px;
   }
   .hamburger {
     width: 38px;

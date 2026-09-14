@@ -210,21 +210,7 @@ body {
 
 @media (max-width: 768px) {
   .sound-toggle-btn {
-    top: 24px;
-    right: 170px;
-    padding: 0;
-    width: 42px;
-    height: 42px;
-    border-radius: 50%;
-    justify-content: center;
-    box-shadow: 0 3px 15px rgba(139, 58, 30, 0.1), 4px 4px 0px rgba(139, 58, 30, 0.06);
-  }
-  .sound-toggle-btn span {
-    display: none;
-  }
-  .sound-toggle-btn svg {
-    width: 16px;
-    height: 16px;
+    display: none !important;
   }
   @keyframes pulse-ring {
     0% {
