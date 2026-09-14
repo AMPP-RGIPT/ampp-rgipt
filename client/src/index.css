@@ -156,8 +156,8 @@ body {
 /* Pulsing Sound Toggle Button */
 .sound-toggle-btn {
   position: fixed;
-  top: 24px;
-  right: 360px;
+  top: 86px;
+  right: 40px;
   z-index: 10001;
   display: flex;
   align-items: center;
