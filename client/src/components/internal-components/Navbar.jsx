@@ -14,7 +14,7 @@ const NAV_LINKS = [
   { label: 'Contact', href: '/contact', type: 'route' },
 ];
 
-const REGISTER_LINK = "https://docs.google.com/forms/d/e/1FAIpQLScKrCCWZe_Ys2WlIgnwmKQeWMuo03MTGGT13HNsCZqNcaRXEQ/viewform?usp=dialog";
+const REGISTER_LINK = "https://forms.gle/ffT9pHaPFgs7hVxc9";
 
 function Navbar({ isAudioMuted, handleUnmute }) {
 
